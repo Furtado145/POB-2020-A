@@ -11,6 +11,9 @@ import java.util.Scanner;
         public int mult(int num1, int num2){
             return num1 * num2;
         }
+        public float div(float num1, float num2){
+            return num1 / num2;
+        }
         public static void main(String [] args){
             Calculadora c = new Calculadora();
 
@@ -31,6 +34,7 @@ import java.util.Scanner;
             System.out.println("1. Soma");
             System.out.println("2. Subtracao");
             System.out.println("3. Multiplicacao");
+            System.out.println("4. Divisao");
             System.out.println("0. Sair");
 
             opcao = inputOp.nextInt();
@@ -56,6 +60,18 @@ import java.util.Scanner;
                     int conta = c.mult(num1, num2);
 
                     System.out.println("Igual a " + conta);
+                    break;
+                }
+                if (opcao == 4){
+
+                    float conta = c.div(num1, num2);
+
+                    System.out.println("Igual a " + conta);
+                    break;    
+                }
+                else{
+
+                    System.out.println("Opcao inexistente!");
                     break;
                 }
 
