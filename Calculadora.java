@@ -8,6 +8,9 @@ import java.util.Scanner;
         public int sub(int num1, int num2){
             return num1 - num2;
         }
+        public int mult(int num1, int num2){
+            return num1 * num2;
+        }
         public static void main(String [] args){
             Calculadora c = new Calculadora();
 
@@ -24,9 +27,10 @@ import java.util.Scanner;
 
                 Scanner inputOp = new Scanner(System.in);
 
-            System.out.println("O que faremos com eles?");
+            System.out.println("Faremos uma: ");
             System.out.println("1. Soma");
             System.out.println("2. Subtracao");
+            System.out.println("3. Multiplicacao");
             System.out.println("0. Sair");
 
             opcao = inputOp.nextInt();
@@ -43,6 +47,13 @@ import java.util.Scanner;
                 if (opcao == 2){
                     
                     int conta = c.sub(num1, num2);
+
+                    System.out.println("Igual a " + conta);
+                    break;
+                }
+                if (opcao == 3){
+
+                    int conta = c.mult(num1, num2);
 
                     System.out.println("Igual a " + conta);
                     break;
